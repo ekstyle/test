@@ -4,55 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<script>
-    function isMobile() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        return /iPad|iPhone|iPod|Android/i.test(userAgent);
-    }
-    function isiOs() {
-        return /iPad|iPhone|iPod/i.test(navigator.userAgent || navigator.vendor || window.opera);
-    }
-    function isAndroid() {
-        return /Android/i.test(navigator.userAgent || navigator.vendor || window.opera);
-    }
-
-    var appURI = 'dragonfamilyworld://'
-    var appInstalled = false;
-
-
-    var checkApplication = new Promise(function (resolve, reject) {
-        // if (!isMobile()) {
-        //     reject('Not a mobile device');
-        // }
-        setTimeout(function () {
-            var iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = appURI;
-            document.body.appendChild(iframe);
-
-            setTimeout(function () {
-                document.body.removeChild(iframe);
-                if (!appInstalled) {
-                    reject('Application not installed');
-                } else {
-                    resolve('Success!');
-                }
-
-
-
-                resolve('Success!');
-            }, 300);
-        }, 100);
-    });
-
-    checkApplication.then(function (value) {
-        alert(value);
-    }).catch(function (error) {
-        window.location.href = 'https://t.me/gmessier';
-    });
-
-</script>
 <body>
 <h1>Deeplink test</h1>
+<a href="https://api-dev.dragonfamily.world/deeplink/rate"> LINK </a>
 </body>
 </html>
